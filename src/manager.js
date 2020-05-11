@@ -78,7 +78,7 @@ function collectResponses() {
         }
         responses[form_ids[i]] = response_obj;
     }
-    console.log(JSON.parse(JSON.stringify(responses,null,2)))
+    console.log(responses)
     fs.writeFile("text.json",JSON.stringify(responses,null,2), function(err) {
         if (err) {
             console.log(err)
