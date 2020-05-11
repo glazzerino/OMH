@@ -1,2 +1,3 @@
 # OMH
-One Month Hack project repository
+## One Month Hack project repository
+

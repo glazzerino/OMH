@@ -1,0 +1,23 @@
+{
+  "name": "omh",
+  "version": "1.0.0",
+  "description": "One Month Hack ITESM project",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Glazzerino/OMH.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Glazzerino/OMH/issues"
+  },
+  "homepage": "https://github.com/Glazzerino/OMH#readme",
+  "devDependencies": {
+    "electron": "^8.2.5"
+  }
+}
