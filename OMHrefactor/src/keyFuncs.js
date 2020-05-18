@@ -49,6 +49,4 @@ function keys_test() {
     console.log(encrypted)
     var decrypted = test_privkey.decrypt(encrypted)
     console.log(decrypted.toString())
-    
-
 }
