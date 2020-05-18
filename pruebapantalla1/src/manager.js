@@ -1,5 +1,5 @@
 var container = document.getElementById("container")
-
+var RSA = require("bignumber")
 class Question {
     constructor(question,is_essay,options=undefined,) {
         if (!is_essay) {
@@ -21,7 +21,7 @@ test4 = new Question("Gas noble",false,["He","Fr","O"]);
 questions.push(test1)
 questions.push(test2)
 questions.push(test3)
-// questions.push(test4)
+questions.push(test4)
 form_ids = new Array(); // Stores all forms' ids to iterate through them later
 //HTML Rendering
 // Name convention is form_N where N is the number (1..n) of the question
@@ -37,6 +37,7 @@ for (var i=0;i<questions.length;i++) {
     if (questions[i].is_essay) {
         var textarea = document.createElement("textarea");
         textarea.name = form_id
+        textarea.maxLength =245 ;
         form.appendChild(textarea)
     } else {
         for (var x=0;x<questions[i].options.length;x++) {
@@ -61,6 +62,12 @@ for (var i=0;i<questions.length;i++) {
 }
 
 var responses = {};
+var responses_string = JSON.stringify(responses,null,2);
+    var privkey = new RSA.Key();
+    privkey.generate(2048,"65537");
+    var pubkey = new RSA.Key();
+    pubkey.n = privkey.n;
+    pubkey.e = privkey.e;
 function collectResponses() {
     var fs = require("fs");
     console.log(document.getElementsByName("form_1").value)
@@ -69,19 +76,16 @@ function collectResponses() {
         var question_inputs = document.getElementsByName(form_ids[i]);
         for (var x=0;x<question_inputs.length;x++) {
             if (question_inputs[x].type == "radio" && question_inputs[x].checked) {
-                response_obj["response"] = question_inputs[x].value;
+                response_obj["response"] = pubkey.encrypt(question_inputs[x].value);
                 break //when we get our only possible response for a multi-option question and we shall
                     // move onto the next question 
             } else {
-                response_obj["response"] = question_inputs[x].value
+                response_obj["response"] = pubkey.encrypt(question_inputs[x].value)
             }
         }
         responses[form_ids[i]] = response_obj;
     }
     console.log(responses)
-    fs.writeFile("text.json",JSON.stringify(responses,null,2), function(err) {
-        if (err) {
-            console.log(err)
-        }
-    });
+    
+
 }
