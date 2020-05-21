@@ -10,6 +10,6 @@ app.whenReady().then(() => {
             nodeIntegration: true
         }
     });
-    window.loadFile("src/index.html")
-    window.webContents.openDevTools()    
+    window.loadFile("src/index.html");
+    window.webContents.openDevTools();    
 })

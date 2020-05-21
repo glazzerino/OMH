@@ -23,6 +23,7 @@ body {
 }
 
 #submit_button_container {
+    visibility:visible;
     text-align: center;
     padding-top:5%;
 }
@@ -55,4 +56,9 @@ textarea {
     /* border-color: red; */
     align-self: center;
     /* background-color: #ffddcc; */
+}
+
+#status_label {
+    color: chartreuse;
+    visibility: hidden;
 }

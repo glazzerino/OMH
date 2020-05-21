@@ -30,8 +30,9 @@ var q4 = new DOMQuestion("Metal widely used in batteries",false,["Iron","Copper"
 var quiz = new Quiz([q1,q2,q3,q4]);
 var doc = document.getElementById("container")
 quiz.append_to_dom(doc);
+var sub = new Submission(quiz);
 function ladi() {
-    var sub = new Submission(quiz);
+    
     sub.retrieve();
 }
 
