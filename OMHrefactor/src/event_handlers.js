@@ -1,6 +1,6 @@
 function student_redirect() {
-    location.replace("student-side/index.html")
+    location.replace("student-side/student_start.html")
 }
 function teacher_redirect() {
-    alert("work in progress")
+    location.replace("teacher-side/teacher_start.html")
 }

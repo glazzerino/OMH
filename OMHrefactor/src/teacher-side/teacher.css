@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #E1EEFC;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+#maindiv {
+    background-color: skyblue;
+    padding-bottom:30%;
+    padding-left:2%;
+    padding-right:2%;
+    border-radius: 1rem;
+}
+#builder {
+    text-align: center;
+}
+

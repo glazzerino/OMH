@@ -1,3 +1,4 @@
+//Exam startup routine
 
 
 // document.getElementById("test").appendChild(form);
@@ -27,12 +28,16 @@ var q3 = new DOMQuestion("Briefly describe a bird",true,undefined);
 var q4 = new DOMQuestion("Metal widely used in batteries",false,["Iron","Copper","Chrome","Lithium"])
 
 
-var quiz = new Quiz([q1,q2,q3,q4]);
-var doc = document.getElementById("container")
-quiz.append_to_dom(doc);
-var sub = new Submission(quiz);
-function ladi() {
+function start() { 
+    var quiz = new Quiz([q1,q2,q3,q4]);
+    var doc = document.getElementById("container")
+    quiz.append_to_dom(doc);
+    var sub = new Submission(quiz);
     
+}
+
+
+function encrypt() {
     sub.retrieve();
 }
 
