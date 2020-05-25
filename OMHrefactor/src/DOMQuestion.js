@@ -51,5 +51,4 @@ class DOMQuestion {
 
             return cont;
     }
-
 }

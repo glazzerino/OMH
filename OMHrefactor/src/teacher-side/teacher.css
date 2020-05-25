@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica;
     color: white;
     background-color: #E1EEFC;
     padding-left: 20%;
@@ -14,5 +14,35 @@ body {
 }
 #builder {
     text-align: center;
+    
 }
 
+#mult_choice_btn {
+    font-size: large;
+    border-radius: 0.2rem;
+    border-style: none;
+    background-color: lightgreen;
+    padding-left:2%;
+    width:5rem;
+    height:10%;
+    /* padding-right:10%; */
+    transition: 0.2s;
+}
+#mult_choice_btn:hover {
+    background-color: lime;
+}
+
+#essay_btn{
+    font-size: large;
+    border-radius: 0.2rem;
+    border-style: none;
+    width: 5rem;
+    height:10%;
+    background-color: lightsalmon;
+}
+
+.plus_button {
+    background-color: firebrick;
+    border-radius: 1rem;
+    
+}

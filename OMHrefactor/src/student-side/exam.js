@@ -22,6 +22,7 @@ class Quiz {
     }
 }
 //Question definitions
+// console.log("tes")
 var q1 = new DOMQuestion("Question",false,["This","That"])
 var q2 = new DOMQuestion("Most electronegative element?", false, ["Br","Ne","O","Fr"])
 var q3 = new DOMQuestion("Briefly describe a bird",true,undefined);
@@ -35,7 +36,7 @@ function start() {
     var sub = new Submission(quiz);
     
 }
-
+start();
 
 function encrypt() {
     sub.retrieve();
