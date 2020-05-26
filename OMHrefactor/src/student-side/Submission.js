@@ -1,3 +1,4 @@
+
 rsa = require("node-bignumber")
 fs = require("fs")
 class Submission {
@@ -5,7 +6,6 @@ class Submission {
         this.quiz = quiz;
         this.save = new Object();
     }
-
     retrieve() {
         console.log("retrieving..")
         var pubdata = fs.readFileSync("pubkey.json");
@@ -29,8 +29,5 @@ class Submission {
             };
             console.log("File has been created");
         });
-        
     }
-    
-
 }
