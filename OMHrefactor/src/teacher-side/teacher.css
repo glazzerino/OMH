@@ -25,14 +25,14 @@ body {
     padding-left:2%;
     width:5rem;
     height:10%;
-    /* padding-right:10%; */
+    padding-right:10%;
     transition: 0.2s;
 }
 #mult_choice_btn:hover {
     background-color: lime;
 }
 
-#essay_btn{
+#essay_btn {
     font-size: large;
     border-radius: 0.2rem;
     border-style: none;
@@ -41,8 +41,13 @@ body {
     background-color: lightsalmon;
 }
 
-.plus_button {
-    background-color: firebrick;
+#add_button {
+    background-color: crimson;
     border-radius: 1rem;
-    
+    border-color: none;
+    border-width: 0px;
+    /* padding-top:20%; */
 }
+
+
+

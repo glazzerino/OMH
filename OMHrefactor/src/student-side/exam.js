@@ -27,10 +27,10 @@ var q1 = new DOMQuestion("Question",false,["This","That"])
 var q2 = new DOMQuestion("Most electronegative element?", false, ["Br","Ne","O","Fr"])
 var q3 = new DOMQuestion("Briefly describe a bird",true,undefined);
 var q4 = new DOMQuestion("Metal widely used in batteries",false,["Iron","Copper","Chrome","Lithium"])
-
+var q5 = new DOMQuestion("name every dog", false,["chappie", "snoopy"]);
 
 function start() { 
-    var quiz = new Quiz([q1,q2,q3,q4]);
+    var quiz = new Quiz([q1,q2,q3,q4,q5]);
     var doc = document.getElementById("container")
     quiz.append_to_dom(doc);
     var sub = new Submission(quiz);
