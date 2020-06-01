@@ -1,4 +1,5 @@
 container = document.getElementById("builder");
+
 // container.id = "question_container"
 var id_num_accumulator = 0;
 var skeleton = new Object;
@@ -46,7 +47,7 @@ function new_multiple_choice() {
     add_button.id = "add_button";
     add_button.onclick = function () {
         // adds new checkbox
-        // console.log("lmao")
+
         form.appendChild(document.createElement("br"));
         var { input, label } = make_option();
         form.appendChild(label);
@@ -63,6 +64,7 @@ function new_multiple_choice() {
 
     less_button.onclick = function () {
         if (form.children.length - 3 >= 2) {
+
             var elements = form.children;
             var last_input = form.children[form.children.length - 1];
             var last_label = form.children[form.children.length - 2];
@@ -119,28 +121,65 @@ function get_obj() {
         skeleton[elems[x].id].heading = elems[x].getElementsByTagName("h2")[0].textContent;
         inputs_obj = new Object;
 
-            var inputs = elems[x].getElementsByTagName("input");
-            var labels = elems[x].getElementsByTagName("label");
-            
-            var type = "multi";
-            if (inputs.length == 0) {
-                type = "essay";
-            }
-            skeleton[elems[x].id]["type"] = type;
+        var inputs = elems[x].getElementsByTagName("input");
+        var labels = elems[x].getElementsByTagName("label");
 
-            for (var i = 0; i < inputs.length; i++) {
-                var individual_input = new Object;
-                individual_input.label = labels[i].textContent; // <- multi-choice only, since there are no other input types
-                if (inputs[i].type == "checkbox") {
-                    if (inputs[i].checked) {
-                        individual_input.is_ans = true;
-                    } else {
-                        individual_input.is_ans = false;
+        var type = "multi";
+        if (inputs.length == 0) {
+            type = "essay";
+        }
+        skeleton[elems[x].id]["type"] = type;
+
+        for (var i = 0; i < inputs.length; i++) {
+            var individual_input = new Object;
+            individual_input.label = labels[i].textContent; // <- multi-choice only, since there are no other input types
+
+            if (inputs[i].type == "checkbox") {
+                if (inputs[i].checked) {
+                    individual_input.is_ans = true;
+                } else {
+                    individual_input.is_ans = false;
+                }
+            }
+            inputs_obj[inputs[i].id] = individual_input;
+        }
+        if (skeleton[elems[x].type == "multi"]) {
+            skeleton[elems[x].id].body = inputs_obj;
+        }
+    }
+    document.getElementById("overlay").style.display = "block";
+    var box = document.getElementById("password_box");
+    box.addEventListener("keyup", function (event) {         
+        // Make skeleton clone without answers
+        var clone = skeleton;
+        if (event.key === "Enter") {
+            for (key in clone) {
+                if (clone[key].type == "multi") {
+                    for (subkey in skeleton[key]) {
+                        delete skeleton[key].is_ans;
                     }
                 }
-                inputs_obj[inputs[i].id] = individual_input;
             }
-            skeleton[elems[x].id].body = inputs_obj;        
-    }
-    console.log(skeleton);
+            // crypto_worker.postMessage([skeleton, box.value]);
+            var password = box.value;
+            var clone = Object.assign({}, skeleton);
+            delete clone.is_ans;
+            console.log(clone);
+            [data, salt] = encrypt(clone, password);
+            console.log(data);
+        }
+    });
+}
+
+function encrypt(data, pass) {
+    const cryptojs = require("crypto-js");
+    var exam_string = JSON.stringify(data);
+    var password = pass;
+    var content_string = JSON.stringify()
+    var salt = cryptojs.lib.WordArray.random(128 / 8);
+    var key = cryptojs.PBKDF2(password, salt, {
+        keySize: 256 / 32
+    });
+    var encrypted = cryptojs.AES.encrypt(exam_string, key.toString());
+    return [encrypted, salt];
 }
