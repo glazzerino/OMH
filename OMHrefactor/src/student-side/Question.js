@@ -1,5 +1,5 @@
 class Question {
-    constructor(text,is_essay, options) {
+    constructor(text, is_essay, options) {
         // console.log(options)
         if (is_essay) {
             this.text = text;

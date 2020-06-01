@@ -13,7 +13,7 @@ class Submission {
         var pubkey = new rsa.Key();
         pubkey.setPublic(pubkey_json.n, pubkey_json.e);
         console.log(pubkey)
-        for (var i=0; i<this.quiz.input_ids.length; i++) {
+        for (var i = 0; i < this.quiz.input_ids.length; i++) {
             var input = document.getElementById(this.quiz.input_ids[i]);
             if (input.type == "textarea" || input.checked) {
                 var value = input.value;
@@ -22,7 +22,7 @@ class Submission {
             }
         }
         console.log("lmao")
-        fs.writeFileSync("./submission.json", JSON.stringify(this.save,null,2), (err) => {
+        fs.writeFileSync("./submission.json", JSON.stringify(this.save, null, 2), (err) => {
             if (err) {
                 console.error(err);
                 return;
