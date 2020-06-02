@@ -26,10 +26,10 @@ de prevenir modificaciónes que no se pueden prevenir en un modelo de enseñanza
 ## Capturas de pantalla
 ![alt text][imagen1](https://github.com/Glazzerino/OMH/tree/masters/images/1.png "Captura")
 
-![alt text][imagen1](https://github.com/Glazzerino/OMH/tree/masters/images/2.png "Captura")
+![alt text][imagen2](https://github.com/Glazzerino/OMH/tree/masters/images/2.png "Captura")
 
-![alt text][imagen1](https://github.com/Glazzerino/OMH/tree/masters/images/3.png "Captura")
+![alt text][imagen3](https://github.com/Glazzerino/OMH/tree/masters/images/3.png "Captura")
 
 ![alt text][imagen1](https://github.com/Glazzerino/OMH/tree/masters/tree/masters/images/4.png "Captura")
 
-![alt text][imagen1](https://github.com/Glazzerino/OMH/tree/masters/images/5.png "Captura")
+![alt text][imagen1](images/5.png "Captura")
