@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="exam.css">
+</head>
+<body>
+    <div id="password_div">
+        <h3>Contraseña:</h3>
+        <input type="text" id="password_box" name="password_box">
+        <button type="button" onclick="check_password()" id="start_button">Empezar</button>
+    </div>
+    <div id="container">
+        <h1 id="header">Examen Offline</h1>
+    </div>
+    <div id="submit_button_container">
+        <button type="button" id="submit_button" onclick="sub.retrieve()">Finalizar examen</button>
+        <h1 id="status_label">status</h1>
+        <!-- <button type="button" id="testbutton" onclick="keys_test()">Test pubkey</button> -->
+    </div>
+    
+    <!-- <script type="text/javascript" src="Question.js"></script> -->
+    <script type="text/javascript" src="keyFuncs.js"></script>
+    <script type="text/javascript" src="../DOMQuestion.js"></script>
+    <script type="text/javascript" src="Submission.js"></script>
+    <script type="text/javascript" src="exam.js"></script>
+</body>

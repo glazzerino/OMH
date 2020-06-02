@@ -1,0 +1,21 @@
+{
+  "name": "omhrefactor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.0.0",
+    "electron": "^8.2.5",
+    "node-bignumber": "^1.2.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "electron-packager": "^14.2.1"
+  }
+}

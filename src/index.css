@@ -1,0 +1,45 @@
+body {
+    background-color: #767B91;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+    
+#main {
+    padding-top: 30%;
+    text-align: center;
+}
+
+#estudiante {
+    border-radius: 0.2rem;
+    border-style: none;
+    padding-left: 2%;
+    color: white;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: blue;
+    transition-duration: 0.3s;
+}
+
+#estudiante:hover {
+    background-color: lightskyblue;
+    color: black;
+}
+
+#maestro {
+    border-radius: 0.2rem;
+    border-style: none;
+    padding-left: 2%;
+    color: white;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: red;
+    transition-duration: 0.3s;
+}
+
+#maestro:hover {
+    background-color: pink;
+    color: black;
+}
