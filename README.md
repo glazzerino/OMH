@@ -37,3 +37,5 @@ de prevenir modificaciónes que no se pueden prevenir en un modelo de enseñanza
 ![alt text](images/4.png "Captura")
 
 ![alt text](images/5.png "Captura")
+
+![alt text](images/6.png "Captura")
