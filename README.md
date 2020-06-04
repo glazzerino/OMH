@@ -24,7 +24,7 @@ El archivo que se le hace llegar a la familia en contexto carga consigo el exame
 y la llave pública RSA.  
 
 Ésta última permite el posterior cifrado del archivo generado por las respuestas del alumno, con la intención
-de prevenir modificaciónes que no se pueden prevenir en un modelo de enseñanza carente de una conexión a internet.
+de prevenir modificaciónes que no se pueden evitar en un modelo de enseñanza carente de una conexión a internet.
 
 
 ## Capturas de pantalla
