@@ -2,6 +2,7 @@
 # Contraseña para pruebas (modo estudiante): __batman__
 
 > $ npm install
+
 > $ npm start
 
 ## Plataforma de Estandarización Académica Offline
