@@ -1,6 +1,9 @@
 
 # Contraseña para pruebas (modo estudiante): __batman__
 
+> $ npm install
+> $ npm start
+
 ## Plataforma de Estandarización Académica Offline
 > El modelo público de enseñanza mexicana como respuesta a la contingencia consiste en la impartición de clases por medio de la televisión, que si bien es una manera de solventar el problema, no permite la aplicación de pruebas (exámenes) que sirven como instrumento de medición de la efectividad del sistema educativo. 
 
@@ -38,3 +41,5 @@ de prevenir modificaciónes que no se pueden evitar en un modelo de enseñanza c
 ![alt text](images/3.png  "Captura")
 
 ![alt text](images/6.png "Captura")
+
+
