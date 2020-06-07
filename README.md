@@ -35,8 +35,6 @@ de prevenir modificaciónes que no se pueden evitar en un modelo de enseñanza c
 
 ![alt text](images/2.png "Captura")
 
-![alt text](images/4.png "Captura")
-
 ![alt text](images/5.png "Captura")
 
 ![alt text](images/3.png  "Captura")
