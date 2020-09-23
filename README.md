@@ -1,37 +1,30 @@
 
-# Contraseña para pruebas (modo estudiante): __batman__
+# Test's password (student mode): __batman__
 
 > $ npm install
 
 > $ npm start
 
-## Plataforma de Estandarización Académica Offline
-> El modelo público de enseñanza mexicana como respuesta a la contingencia consiste en la impartición de clases por medio de la televisión, que si bien es una manera de solventar el problema, no permite la aplicación de pruebas (exámenes) que sirven como instrumento de medición de la efectividad del sistema educativo. 
+## Offline Academic Stantardization tool
+> The mexican public education model's approach to the contingency relies on TV to reach the students on their homes. Although this is a way to cope with the challenges of our times, it does not allow for test application, and thus, do not allow for academic stantardization. TV was the media of choice since several regions of the country are still offline, due to development and/or economical reasons.
 
-Este proyecto es una prueba de concepto del empleo de tecnologías existentes con la finalidad de asegurar la continuidad de la educación en México
+This program allows for the creationg of a quiz composed of two types of questions:
+* Essay questions
+* Multiple choice questions
 
-Este programa permite la creación y aplicación de exámenes con dos tipos de preguntas
-* Preguntas de tipo ensayo
-* Preguntas de opción múltiple
+This tool allows for santardization by digital quizes distributed via alternative media that bypass the need for an internet conection.
 
-El proyecto es una prueba de concepto de un sistema que permita la estandarización por medio de exámenes digitales distribuidos por diferentes medios auxiliares que solventan la ausencia del servicio de internet.
-
-Lo logra empleando dos tipos de cifrado: 
+It uses two forms of cryptography:
 * **cifrado basado en contraseña** (AES aumentado por PBKDF2)
-* **cifrado asimétrico** (RSA)
+* **Password based** (AES+PBKDF2)
+* **Asymetric cryptography** (RSA)
 
-El cifrado AES permite la definición de una llave amigable al usuario que sea distribuida por medios 
-análogos al internet, como por ejemplo la radio o la televisión, de la misma manera en que se imparten clases
-en casa a razón de la cuarentena.
+AES allows for the definition of a human-friendly key that could be distributed via other kinds of media, like radio or TV.
 
-El archivo que se le hace llegar a la familia en contexto carga consigo el examen cifrado por la contraseña, la *salt* 
-y la llave pública RSA.  
+The file that's sent to a given household carries the encrypted quiz, the salt and a public RSA key.
+The latter enables the student's answers to be then encrypted once it's been completed. Encryption prevents the exam from being subject to illegal modifications after it's been finished.
 
-Ésta última permite el posterior cifrado del archivo generado por las respuestas del alumno, con la intención
-de prevenir modificaciónes que no se pueden evitar en un modelo de enseñanza carente de una conexión a internet.
-
-
-## Capturas de pantalla
+## Screenshots
 
 ![alt text](images/2.png "Captura")
 
